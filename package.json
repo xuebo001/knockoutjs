@@ -1,0 +1,25 @@
+{
+  "name": "knockoutjs",
+  "version": "1.0.0",
+  "description": "knockoutjs 学习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuebo001/knockoutjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuebo001/knockoutjs/issues"
+  },
+  "homepage": "https://github.com/xuebo001/knockoutjs#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "knockout-commonjs": "0.0.3",
+    "knockout.mapping": "^2.4.2",
+    "knockout.punches": "^0.4.0"
+  }
+}
