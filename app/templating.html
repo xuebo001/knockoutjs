@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Templating</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="/node_modules/knockout/build/output/knockout-latest.js"></script>
+</head>
+<body>
+    <div class="col-sm-4">
+        <h2>People</h2>
+        <ul data-bind="foreach:people">
+            <li>
+                <div class="form-group">
+                    <span data-bind="text:name"></span> has <span data-bind="text:children().length">&nbsp;</span>
+                    children :
+                    <a href="#" data-bind="click:addChild">Add Child</a>
+                </div>
+                <ul data-bind="foreach: children">
+                    <li>
+                        <span data-bind="text: $data"></span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+<script>
+    var Person = function (name,children) {
+        this.name = name;
+        this.children = ko.observableArray(children);
+        this.addChild = function () {
+            this.children.push("New child")
+        }.bind(this);
+    }
+    var viewModel = {
+        people: [
+            new Person("Annabelle", ["Arnie", "Anders", "Apple"]),
+            new Person("Bertie", ["Boutros-Boutros", "Brianna", "Barbie", "Bee-bop"]),
+            new Person("Charles", ["Cayenne", "Cleopatra"])
+    ]
+    };
+    ko.applyBindings(viewModel);
+</script>
+</html>
