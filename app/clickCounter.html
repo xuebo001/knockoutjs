@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clickCounter</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="/node_modules/knockout/build/output/knockout-latest.js"></script>
+</head>
+<body>
+<div class="form-group">
+    You've clicked <span data-bind="text:numberOfClick">&nbsp;</span> times
+</div>
+<button class="btn btn-primary btn-lg" data-bind="click:registerClick, disable:hasClickTooManyTimes">Click me</button>
+<div data-bind='visible: hasClickTooManyTimes'>
+    That's too many clicks! Please stop before you wear out your fingers.
+    <button data-bind='click: resetClicks'>Reset clicks</button>
+</div>
+</body>
+<script>
+    var ClickCounterViewModel = function () {
+        this.numberOfClick = ko.observable(0);
+
+        this.registerClick = function () {
+            this.numberOfClick(this.numberOfClick() + 1);
+        }
+        this.resetClicks = function () {
+            this.numberOfClick(0);
+        }
+        this.hasClickTooManyTimes = ko.computed(function () {
+            return this.numberOfClick() > 3;
+        },this);
+    }
+    ko.applyBindings(new ClickCounterViewModel());
+</script>
+</html>

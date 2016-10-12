@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="/node_modules/knockout/build/output/knockout-latest.js"></script>
+</head>
+<body>
+<div class="form-horizontal">
+    <div class='form-group'>
+        <label class="col-sm-2 control-label">firstName</label>
+        <div class="col-sm-2">
+            <input class='form-control' data-bind='value: firstName'/>
+        </div>
+    </div>
+
+    <div class="from-group">
+        <label class="col-sm-2 control-label">lastName</label>
+        <div class="col-sm-2">
+            <input class='form-control' data-bind='value: lastName'/>
+        </div>
+    </div>
+
+    <div class="from-group">
+        <div class="col-sm-2">
+            <h2>Hello, <span data-bind='text: fullName'> </span>!</h2>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    // Here's my data model
+    var ViewModel = function (first, last) {
+        this.firstName = ko.observable(first);
+        this.lastName = ko.observable(last);
+
+        this.fullName = ko.computed(function () {
+            // Knockout tracks dependencies automatically. It knows that fullName depends on firstName and lastName, because these get called when evaluating fullName.
+            return this.firstName() + " " + this.lastName();
+        }, this);
+    };
+
+    ko.applyBindings(new ViewModel("Planet", "Earth")); // This makes Knockout get to work
+</script>
+</html>
