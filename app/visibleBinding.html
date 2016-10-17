@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>visibleBinding</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="/node_modules/knockout/build/output/knockout-latest.js"></script>
+</head>
+<body>
+<div data-bind="visible: shouldShowMessage">
+    You will see this message only when "shouldShowMessage" holds a true value.
+</div>
+<script type="text/javascript">
+    var viewModel = {
+        shouldShowMessage: ko.observable(true) // Message initially visible
+    };
+    viewModel.shouldShowMessage(false); // ... now it's hidden
+    //viewModel.shouldShowMessage(true); // ... now it's visible again
+    ko.applyBindings(viewModel)
+</script>
+</body>
+</html>

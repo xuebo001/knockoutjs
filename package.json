@@ -21,5 +21,8 @@
     "knockout-commonjs": "0.0.3",
     "knockout.mapping": "^2.4.2",
     "knockout.punches": "^0.4.0"
+  },
+  "devDependencies": {
+    "gitbook-plugin-disqus": "^0.1.0"
   }
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>visibleBinding</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="/node_modules/knockout/build/output/knockout-latest.js"></script>
+</head>
+<body>
+<div data-bind="html: details"></div>
+<div data-bind="css: { profitWarning: currentProfit() < 0 , fontWeight: isSevere() ? 'bold' : ''} ">
+    Profit Information
+</div>
+<script type="text/javascript">
+    var viewModel = {
+        currentProfit: ko.observable(150000),
+        isSevere:ko.observable(true)
+        // Positive value, so initially we don't apply the "profitWarning" class
+    };
+    viewModel.currentProfit(-50);
+    // Causes the "profitWarning" class to be applied
+    ko.applyBindings(viewModel)
+</script>
+</body>
+</html>
