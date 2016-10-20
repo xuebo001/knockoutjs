@@ -1,7 +1,7 @@
 # Summary
 
 * [knockoutjs学习笔记](README.md)
-* [一 Knockoutjs介绍](chapter1/README.md)
+* [一 Knockoutjs简介](chapter1/README.md)
 * [二 数据模型和监控属性](chapter2/README.md)
 * [三 监控属性数组](chapter3/README.md)
 * [四 计算属性](chapter4/README.md)
