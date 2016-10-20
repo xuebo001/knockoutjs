@@ -1,6 +1,6 @@
 使用此功能可以方便我们循环遍历输出某个数组、集合中的内容。
 
-* 循环遍历输出数组:
+##### 循环遍历输出数组:
 
     ```
     <script type="text/javascript" src="knockout-2.2.0.js"></script>
@@ -27,7 +27,7 @@
     
     ```
     
-* 动态增加和删除遍历节点
+##### 动态增加和删除遍历节点
 
     ```
     <script type="text/javascript" src="knockout-2.2.0.js"></script>
