@@ -1,18 +1,17 @@
 简单例子：
-```
-<p>First name: <strong data-bind="text: firstName"></strong></p>
-<p>Last name: <strong data-bind="text: lastName"></strong></p>
-<p>First name: <input data-bind="value: firstName" /></p>
-<p>Last name: <input data-bind="value: lastName" /></p>
-<script>
-var myViewModel = {
+
+    <p>First name: <strong data-bind="text: firstName"></strong></p>
+    <p>Last name: <strong data-bind="text: lastName"></strong></p>
+    <p>First name: <input data-bind="value: firstName" /></p>
+    <p>Last name: <input data-bind="value: lastName" /></p>
+    <script>
+    var myViewModel = {
     this.firstName = ko.observable("Bert");
     this.lastName = ko.observable("Bertington");
-}
-ko.applyBindings(myViewModel);
-</script>
+    }
+    ko.applyBindings(myViewModel);
+    </script>
 
-```
 * MVVM设计模式
 
     **Model**，用于存储你应用程序数据，这些数据表示你业务领域的对象和数据操作（例如：银行可以进行资金转账），
