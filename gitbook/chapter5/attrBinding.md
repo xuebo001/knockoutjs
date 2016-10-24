@@ -1,6 +1,6 @@
 attr 绑定提供了一种方式可以设置DOM元素的任何属性值。你可以设置img的src属性，连接的href属性。使用绑定，当模型属性改变的时候，它会自动更新。
 
-```
+```html
 <a data-bind="attr: { href: url, title: details }">
     Report
 </a>

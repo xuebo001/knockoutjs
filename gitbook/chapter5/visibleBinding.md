@@ -1,6 +1,6 @@
 Visible绑定通过绑定一个值来确定DOM元素显示或隐藏.如下例：
 
-```
+```html
 <div data-bind="visible: shouldShowMessage"> 
  You will see this message only when "shouldShowMessage" holds a true value.
 </div>

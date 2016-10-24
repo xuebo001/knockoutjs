@@ -1,6 +1,6 @@
 使用with binding来重新定义一个上下文绑定
 
-```
+```html
 <script type="text/javascript" src="knockout-2.2.0.js">
 </script>
 <h1 data-bind="text: city">

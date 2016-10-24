@@ -1,6 +1,6 @@
 click绑定大部分是用在button，input和连接a上，但是可以在任意元素上使用。
 
-```
+```html
 <div>
     You've clicked
     <span data-bind="text: numberOfClicks">

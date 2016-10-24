@@ -1,6 +1,6 @@
 使用if binding可以控制某个组件动态显示，类似我们之前接触到的visible属性
 
-```
+```html
 <script type="text/javascript" src="knockout-2.2.0.js">
 </script>
 <label>

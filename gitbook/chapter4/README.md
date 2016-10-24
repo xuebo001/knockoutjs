@@ -1,6 +1,6 @@
 让我们通过一个简单的例子来了解计算属性的用法：
 
-```
+```html
 <p>First name: <strong data-bind="text: firstName"></strong></p>
 <p>Last name: <strong data-bind="text: lastName"></strong></p>
 <p>full name: <strong data-bind="text: fullName"></strong></p>

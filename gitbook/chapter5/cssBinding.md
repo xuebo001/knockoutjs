@@ -1,6 +1,6 @@
 css绑定是添加或删除一个或多个CSS class到DOM元素上。
 
-```
+```html
 <div data-bind="css: { profitWarning: currentProfit() < 0 }"> 
   Profit Information
 </div> 

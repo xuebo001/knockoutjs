@@ -1,6 +1,6 @@
 event绑定,大部分情况下是用在keypress，mouseover和mouseout上。
 
-```
+```html
 <div>
     <div data-bind="event: { mouseover: enableDetails, mouseout: disableDetails }">
         Mouse over me

@@ -3,22 +3,24 @@
 ##### 初始化数组：
 
 方式一：
-
-        var myObservableArray = ko.observableArray(); （实例化了一个数组）
-        myObservableArray.push('Somevalue');myObservableArray.push('Somevalue');
-
+```javascript
+var myObservableArray = ko.observableArray(); （实例化了一个数组）
+myObservableArray.push('Somevalue');myObservableArray.push('Somevalue');
+``` 
 方式二：
-
-        var anotherObservableArray = ko.observableArray([
-        {name: "Bungle", type: "Bear" }, 
-        {name: "George", type: "Hippo" },
-        {name: "Zippy", type: "Unknown" }
-        ]);  
-          
+```javascript
+var anotherObservableArray = ko.observableArray([
+{name: "Bungle", type: "Bear" }, 
+{name: "George", type: "Hippo" },
+{name: "Zippy", type: "Unknown" }
+]);  
+```          
 ##### 访问数组：
 
-        alert('The length of the array is ' + observableArray().length);
-        alert('The first element is ' + observableArray()[0]);
+```javascript 
+alert('The length of the array is ' + observableArray().length);
+alert('The first element is ' + observableArray()[0]);
+```
         
 ##### 常用的方法:
 

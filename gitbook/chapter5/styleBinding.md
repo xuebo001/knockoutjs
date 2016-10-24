@@ -1,6 +1,6 @@
 style绑定是添加或删除一个或多个DOM元素上的style值.
 
-```
+```html
 <div data-bind="style: { color: currentProfit() < 0 ? 'red' : 'black' }">   
 Profit Information
 </div>

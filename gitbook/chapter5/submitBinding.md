@@ -1,6 +1,6 @@
 submit绑定只能用在表单form元素上。
 
-```
+```html
 <form data-bind="submit: doSomething">
     ... form contents go here ...
     <button type="submit">Submit</button>

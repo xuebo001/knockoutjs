@@ -19,4 +19,4 @@
     * [11)	event绑定](chapter5/eventBinding.md)
     * [12)	submit绑定](chapter5/submitBinding.md)
     * [13)	value绑定](chapter5/valueBinding.md)
-
+* [附Markdown编辑器语法](chapter6/README.md)
